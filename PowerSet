@@ -1,0 +1,28 @@
+ static void binaryPowerSet(String [] input)
+    {
+//computes the power set using bit operations
+        int length=input.length;
+        int end=(int)Math.pow(2, length);
+        int value=0;
+    
+        while(value<end)
+        {
+            int index=0;
+            System.out.print("[ ");
+         
+            for(int i=length-1;i>=0;i--)
+            {
+               
+                if(((1<<i)&value)!=0 )
+                {
+                    System.out.print(input[index]+" ");
+                }
+                index++;
+            }
+            System.out.println("]");
+            value++;
+            
+          
+        }
+     
+    }
