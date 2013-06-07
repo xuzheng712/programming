@@ -1,0 +1,14 @@
+public boolean canJump(int[] A) {
+       
+         int able=A.length-1;
+        
+        for(int i=A.length-2;i>=0;i--)
+        {
+            if(A[i]>=able-i)
+            {
+                able=i;
+            }
+        }
+        return able==0;
+        
+    }
